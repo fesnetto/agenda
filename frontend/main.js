@@ -1,5 +1,7 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
+import './assets/css/style.css';
+import { FaEdit, FaWindowClose, FaPlus } from "react-icons/fa";
 
 import Login from './modules/Login';
 
@@ -8,6 +10,3 @@ const cadastro = new Login('.form-cadastro');
 
 login.init();
 cadastro.init();
-
-// import './assets/css/style.css';
-
