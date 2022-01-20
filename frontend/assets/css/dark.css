@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+:root {
+  --primary-color: #1f1b24;
+  --primary-color-darker: #121212;
+  --primary-text-color: #dfe3ee;
+  --secondary-text-color: #03da65;
+}
+
+body {
+  background: var(--primary-color);
+  font-family: 'Open sans', sans-serif;
+  color: var(--primary-text-color);
+}
+
+.container {
+  background: var(--primary-color);
+}
+
+.table {
+  color: var(--primary-text-color)!important;
+}
+.table-striped{
+  background-color: var(--primary-color)!important;
+  }
+.table-hover tbody tr:hover {
+  background-color:rgba(0,0,0,.075);
+}
+.table>tbody>tr>td,
+.table>tbody>tr>th {
+  border-top: none;
+}
+
+.navbar-bg-color {
+  background-color: var(--primary-color-darker);
+}
+
+.navbar-agenda {
+  color: var(--primary-text-color);
+  font-size:1.25rem;
+}
+.navbar-agenda:hover {
+  color: var(--secondary-text-color);
+}
+
+.navbar-text {
+  font-size:1rem;
+  line-height:inherit;
+  color: var(--primary-text-color);
+  padding-left: 15px;
+}
+.navbar-text:hover {
+  color: var(--secondary-text-color);
+}
+
+.nav-button-decoration {
+  display:inline-block;
+  width:1.5em;
+  height:1.5em;
+  vertical-align:middle;
+  content:"";
+  background:no-repeat center center;
+  background-size:100% 100%;
+  background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(223, 227, 238, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.nav-button {
+  border-color: var(--primary-color);
+  color: var(--primary-color) !important;
+  margin:0;
+  overflow:visible;
+  text-transform:none;
+}
+.nav-button:hover{
+  border-color: var(--secondary-text-color);
+}
+.nav-button:focus {
+  outline:1px;
+}
+
+.edit-button {
+ color: var(--primary-text-color);
+}
+.edit-button:hover {
+ color: var(--secondary-text-color);
+}
+
+.btn-outline-link {
+  color: var(--primary-color-darker);
+  border-color: var(--primary-text-color) !important;
+  background-color: var(--primary-text-color);
+}
+.btn-outline-link:focus {
+  box-shadow: none;
+  border-color: var(--secondary-text-color) !important;
+  background-color: var(--secondary-text-color);
+  color: var(--primary-color-darker);
+}
+.btn-outline-link:hover {
+  color: var(--secondary-text-color);
+  background-color: var(--primary-color-darker);
+  border-color: var(--secondary-text-color) !important;
+}
+.form-control:focus {
+  box-shadow: none;
+  border-color: var(--secondary-text-color);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  max-width: max-content;
+}

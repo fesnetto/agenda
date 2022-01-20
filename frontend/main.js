@@ -1,6 +1,7 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
-import './assets/css/style.css';
+import './assets/css/dark.css';
+
 import { FaEdit, FaWindowClose, FaPlus } from "react-icons/fa";
 
 import Login from './modules/Login';

@@ -10,6 +10,16 @@ body {
   font-family: 'Open sans', sans-serif;
 }
 
+.container {
+  background: var(--primary-color);
+  position: relative;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th {
+  border-top: none;
+}
+
 .navbar-bg-color {
   background-color: var(--primary-color-darker);
 }
@@ -44,7 +54,7 @@ body {
 }
 .nav-button {
   border-color: var(--primary-text-color);
-  color: #f7f7f7!important;
+  color: var(--primary-color) !important;
   margin:0;
   overflow:visible;
   text-transform:none;
@@ -56,22 +66,29 @@ body {
   outline:1px;
 }
 
-.container {
-  background: var(--primary-color);
+.edit-button {
+ color: var(--primary-text-color);
+}
+.edit-button:hover {
+ opacity: 80%;
 }
 
-.edit-button {
-color: var(--primary-text-color);
- }
-
-.btn-primary {
+.btn-outline-link {
   border: none;
   color: var(--primary-text-color);
   background-color: var(--primary-color-darker);
 }
-
-.btn-primary:hover {
+.btn-outline-link:hover {
   border: none;
   color: var(--primary-color);
   background-color: var(--primary-color-darker);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  max-width: max-content;
 }
