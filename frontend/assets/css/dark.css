@@ -12,12 +12,22 @@ body {
   color: var(--primary-text-color);
 }
 
+.table-agenda {
+  flex-direction: column;
+}
+
+.h1agenda{
+  position: relative;
+  top: 1.5rem;
+}
+
 .container {
   background: var(--primary-color);
 }
 
 .table {
   color: var(--primary-text-color)!important;
+  padding-left: 8px;
 }
 .table-striped{
   background-color: var(--primary-color)!important;
@@ -33,7 +43,9 @@ body {
 .navbar-bg-color {
   background-color: var(--primary-color-darker);
 }
-
+.navbar {
+  height: 66px;
+}
 .navbar-agenda {
   color: var(--primary-text-color);
   font-size:1.25rem;
@@ -104,11 +116,21 @@ body {
   border-color: var(--secondary-text-color);
 }
 
-.center {
+.btn-theme-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .btn {
   max-width: max-content;
+  border-radius: 8px;
+}
+
+.btn-group>.btn-group:not(:last-child)>.btn, .btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
+  border-top-right-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+}
+.btn-group>.btn-group:not(:first-child)>.btn, .btn-group>.btn:not(:first-child) {
+  border-top-left-radius: 8px !important;
+  border-bottom-left-radius: 8px !important;
 }

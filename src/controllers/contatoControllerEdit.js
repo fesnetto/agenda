@@ -1,11 +1,5 @@
 const Contato = require('../models/ContatoModel');
 
-exports.index = (req, res) => {
-  res.render('contato-edit', {
-    contato: {}
-  });
-};
-
 exports.editIndex = async function (req, res) {
   if (!req.params.id) return res.render('404');
 
@@ -28,7 +22,7 @@ exports.edit = async function (req, res) {
     }
 
     req.flash('success', 'Contato editado com sucesso.');
-    req.session.save(() => res.redirect(`/contato-edit/index/${contato.contato._id}`));
+    req.session.save(() => res.redirect(`/contato-edit/contato/${contato.contato._id}`));
     return;
   } catch (e) {
     console.log(e);

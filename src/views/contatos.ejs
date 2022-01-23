@@ -1,15 +1,13 @@
 <%- include('includes/head') %>
   <%- include('includes/nav') %>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-2"></div>
-
-        <div class="col-lg-8 my-3">
+      <div class="row table-agenda">
+        <div class="h1agenda">
           <h1 class="text-center">Agenda</h1>
           <p class="text-center lead">Seus contatos estão abaixo</p>
-
-          <%- include('includes/messages') %>
-
+        </div>
+        <%- include('includes/messages') %>
+          <div class="col-lg-12 my-3">
             <% if(contatos.length> 0) { %>
               <div class="table-responsive">
                 <table class="table table-striped my-3">
@@ -27,7 +25,7 @@
                       <td>
                         <%= contato.email %>
                       </td>
-                      <td><a href="/contato-edit/index/<%= contato._id %>"><svg stroke="currentColor"
+                      <td><a href="/contato-edit/contato/<%= contato._id %>"><svg stroke="currentColor"
                             fill="currentColor" stroke-width="0" viewBox="0 0 576 512" class="edit-button" height="1em"
                             width="1em" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -50,16 +48,20 @@
               <% } else { %>
                 <p class="text-center lead">Não existem contatos na sua agenda.</p>
                 <% } %>
-
-        </div>
-
-        <div class="col-lg-2"></div>
+          </div>
       </div>
     </div>
     <div class="container">
-      <div id="theme" class="btn-group center" role="group">
-        <button class="btn btn-outline-link">Light Mode</button>
-        <button class="btn btn-outline-link">Dark Mode</button>
+      <div id="theme" class="btn-group btn-theme-center" role="group">
+        <button class="btn btn-outline-link" onclick="swapStyle('../../../frontend/assets/css/light.css')">Light
+          Mode</button>
+        <button class="btn btn-outline-link" onclick="swapStyle('../../../frontend/assets/css/dark.css')">Dark
+          Mode</button>
+        <script type="text/javascript">
+          function swapStyle(sheet) {
+            document.getElementById('mystylesheet').href = sheet;
+          }
+        </script>
       </div>
     </div>
     <%- include('includes/footer') %>
